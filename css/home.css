@@ -1,0 +1,31 @@
+header {
+  text-align: center;
+  background-color: #DAA4F2;
+}
+tr td {
+  border:1.5px solid black;
+}
+th {
+  border:1.5px solid black;
+}
+img {
+  width:100px;
+  height:100px;
+}
+.sidepanel  {
+
+  color:white;
+  background-color: #111;
+
+}
+.sidepanel form {
+  margin-left: 15px;
+}
+h2 {
+  background-color: grey;
+  text-align: center;
+}
+.search {
+  background-color: #111;
+  color:white;
+}

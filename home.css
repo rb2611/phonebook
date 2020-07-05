@@ -1,0 +1,22 @@
+tr td {
+  border:1.5px solid black;
+}
+th {
+  border:1.5px solid black;
+}
+img {
+  width:100px;
+  height:100px;
+}
+/*SETTING BAR AND BUTTONS*/
+#addcontact  {
+
+  color:white;
+  background-color: #111;
+
+}
+
+
+#addcontact form {
+  margin-left: 15px;
+}

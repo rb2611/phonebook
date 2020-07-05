@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- REQUIRED META TAGS -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- BOOTSTRAP CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+  <link href="css\home.css" rel="stylesheet">
+  <script src="home.js"></script>
+  <title>PhoneBook</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Phonebook</h1>
+  </header>
+  <div class="row row-content">
+    <div class="col-12 col-md-8">
+        <table id="myTable" style="width:100%;border:2px solid black;">
+          <tr>
+              <th>IMAGE</th>
+              <th>FIRST NAME</th>
+              <th>MIDDLE NAME</th>
+              <th>LAST NAME</th>
+              <th>EMAIL </th>
+              <th>MOBILE NUMBER</th>
+              <th>LANDLINE NUMBER</th>
+              <th>NOTES</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td><img src="img/img.png"></td>
+              <td>Ram</td>
+              <td></td>
+              <td>Bhagat</td>
+              <td>ramanand@gmail.com</td>
+              <td>9078456321</td>
+              <td>23567</td>
+              <td></td>
+              <td><button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+            <tr>
+              <td><img src="img/img.png"></td>
+              <td>Ryan</td>
+              <td>Jatin</td>
+              <td>Saxena</td>
+              <td>ryan@gmail.com</td>
+              <td>1234567890</td>
+              <td>23457</td>
+              <td>abc</td>
+              <td><button type="button" class="btn btn-danger">Delete</button></td>
+
+            </tr>
+            <tr>
+              <td><img src="img/img.png"></td>
+              <td>Ankit</td>
+              <td></td>
+              <td>Verma</td>
+              <td>ankit@gmail.com</td>
+              <td>9828373987</td>
+              <td>26632</td>
+              <td>Nothing to note</td>
+              <td><button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+            <tr>
+              <td><img src=""></td>
+              <td>Ankit</td>
+              <td></td>
+              <td>Verma</td>
+              <td>ankit@gmail.com</td>
+              <td>9828373987</td>
+              <td>26632</td>
+              <td>Nothing to note</td>
+              <td><button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+            <tr>
+              <td><img src="img/img.png"></td>
+              <td>Ram</td>
+              <td></td>
+              <td>Bhagat</td>
+              <td>ramanand@gmail.com</td>
+              <td>9078456321</td>
+              <td>23567</td>
+              <td></td>
+              <td><button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+            <tr id="dele">
+              <td><img src=""></td>
+              <td>Ryan</td>
+              <td>Jatin</td>
+              <td>Saxena</td>
+              <td>ryan@gmail.com</td>
+              <td>1234567890</td>
+              <td>23457</td>
+              <td>abc</td>
+              <td><button type="button" class="btn btn-danger" id="del">Delete</button></td>
+
+            </tr>
+            <tbody id="table-body">
+            </tbody>
+          </table>
+        </div>
+        <div class="col-12 col-md-4">
+          <div id="addcontact" class="sidepanel">
+            <h2>Add New Contact</h2>
+            <form>
+              <label for="image">Image : </label><input type="file" name="image" accept="image/*" id="image"></input><br>
+              <label for="firstname">First Name  :</label> <input type="text" name="firstname" required id="firstname"></input><br>
+              <label for="middlename">Middle Name  :</label> <input type="text" name="middlename" id="middlename"></input><br>
+              <label for="lastname">Last Name  :</label> <input type="text" name="lastname" required id="lastname"></input><br>
+              <label for="email">Email  :</label> <input type="email" name="email" id="email"></input><br>
+              <label for="mobile">Mobile Number  :</label> <input type="number" name="mobile" id="mobile"></input><br>
+              <label for="landline">Landline Number  :</label> <input type="number" name="landline" id="landline"></input><br>
+              <label for="notes">Notes  :</label> <input type="text" name="notes" id="notes"></input><br>
+              <button type="button" class="btn btn-primary" onclick="addcontact()"><i class="fa fa-plus"></i>Add</button>
+            </form>
+            <br>
+          </div>
+          <div class="search">
+            <br>
+            <h2>Search</h2><br><br>
+            <input type="search" id="name" namespaceholder="Enter Name"></input>
+            <button type="button" class="btn btn-primary">Search By Name</button><br><br>
+            <input type="search" id="num" namespaceholder="Enter Number"></input>
+            <button type="button" class="btn btn-primary">Search By Number</button><br><br>
+        </div>
+      </div>
+    <script>
+    function addcontact() {
+
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(7);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+  var cell6 = row.insertCell(5);
+  var cell7 = row.insertCell(6);
+  var cell8 = row.insertCell(7);
+  var cell9 = row.insertCell(8);
+  cell1.innerHTML=document.getElementById("image").innerHTML.value;
+  cell2.innerHTML=document.getElementById("firstname").innerHTML.value;
+  cell3.innerHTML=document.getElementById("middlename").innerHTML.value;
+  cell4.innerHTML=document.getElementById("lastname").innerHTML.value;
+  cell5.innerHTML=document.getElementById("email").innerHTML.value;
+  cell6.innerHTML=document.getElementById("mobile").innerHTML.value;
+  cell7.innerHTML=document.getElementById("landline").innerHTML.value;
+  cell8.innerHTML=document.getElementById("notes").innerHTML.value;
+  cell9.innerHTML=document.getElementById("del").innerHTML.value;
+  }
+
+  </script>
+</body>
+
+</html>

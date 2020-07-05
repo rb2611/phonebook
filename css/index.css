@@ -1,0 +1,20 @@
+header {
+  text-align: center;
+  background-color: #DAA4F2;
+}
+#err {
+  color:red;
+  font-style: italic;
+}
+input {
+  width:50%;
+  background-color: #F9F3F3;
+}
+.container {
+  background-color: lightblue;
+  text-align: center;
+  border:2px solid black;
+}
+body {
+  padding:10px;
+}

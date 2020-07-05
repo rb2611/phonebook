@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- REQUIRED META TAGS -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- BOOTSTRAP CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+  <link href="css/index.css" rel="stylesheet">
+
+  <title>Login</title>
+</head>
+<body>
+  <header>
+    <h1>Phonebook</h1>
+  </header>
+  <div class="container">
+  <div id="err"></div>
+  <form>
+    <label for="email">E-Mail</label><br>
+    <input type="email" name="email" id="text1" value="ramanand@gmail.com" required></input><br>
+    <label for="pswrd">Password</label><br>
+    <input type="password" name="pswrd" id="text2" value="12345678" required></input><br><br>
+    <button type="button" class="btn btn-warning" onclick="validate()">Login</button>
+</form>
+</div>
+  <script type="text/javascript">
+function validate()
+{
+    if(   document.getElementById("text1").value == "ramanand@gmail.com"
+       && document.getElementById("text2").value == "12345678" )
+    {
+        location.href="home.html";
+    }
+    else
+    {
+      document.getElementById("err").innerHTML="Invalid Username and Password";
+    }
+}
+</script>
+</body>
+</html>
